@@ -1,0 +1,29 @@
+<h2>Registro de usuario</h2>
+<br>
+<form [formGroup]='checkoutForm' (ngSubmit)='onSubmit(checkoutForm.value)'>
+    <div class="mb-3">
+        <label class="form-label">Cedula</label >
+        <input type="text" class="form-control" formControlName = "cedula"  name="cedula">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Nombre</label>
+        <input type="text" class="form-control" formControlName="nombre" name="nombre">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Fecha nacimiento</label >
+        <input type="date" class="form-control" formControlName = "fechaNacimiento" name="fechaNacimiento">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Ciudad</label>
+        <select class="form-control" formControlName="ciudad" name="ciudad"> 
+        <option value=""></option>
+        <option value="Machala">Machala</option>
+        <option value="Pasaje">Pasaje</option>
+        <option value="Santa Rosa">Santa Rosa</option>
+       </select>
+    </div>
+    <input type="submit" value="Enviar">
+    <input type="submit" value="Eliminar" (click)="delete()">
+</form>
